@@ -89,7 +89,7 @@ jobs:
           wget "$deb_url" --no-verbose -O ${{ github.workspace }}/flow_fbms.deb
 
       - name: Inject tweaks into IPA
-        run: cyan -i messenger.ipa -o Flow_FBMS_${{ env.FLOW_TAG }}.ipa -uwef flow_fbms.deb -n "${{ inputs.display_name }}" -b ${{ inputs.bundle_id }} -s
+        run: cyan -i messenger.ipa -o Flow_FBMS_${{ env.FLOW_TAG }}.ipa -uwef flow_fbms.deb -n "${{ inputs.display_name }}" -b ${{ inputs.bundle_id }}
 
       - name: Strip embedded Swift dylibs
         run: |
